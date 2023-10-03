@@ -1,0 +1,25 @@
+<template>
+    <lightning-card  title="Child component">
+        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Basic Carousel
+            <lightning-carousel>
+                <template for:each={corousalDetail} for:item="item">
+                    <lightning-carousel-image 
+                    key ={item.header}
+                    src = {item.src}
+                    header = {item.header}
+                    description = {item.description}
+                    >
+                </lightning-carousel-image>
+                </template>
+                <lightning-carousel-image
+                    src = "https://www.lightningdesignsystem.com/assets/images/carousel/carousel-01.jpg"
+                    header = "First Card"
+                    description = "First card description."
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                
+            </lightning-carousel>
+        </div>
+        </lightning-card>
+</template>

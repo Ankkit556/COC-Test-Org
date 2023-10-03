@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="message" type="String" />
+    <lightning:card title="Aura to Lwc communication" footer="optionalFooter">
+        <aura:set attribute="actions">
+            <lightning:button label="exampleButton"/>
+        </aura:set>
+        <div class="slds-p-around_medium">
+                <p class="slds-p-around_xx-large">
+                    {!v.message}
+                </p>
+                <p>This is Aura data</p>
+                <c:lwcComponentAura onshow="{!c.handleMsg}" title="this message is from Aura"></c:lwcComponentAura>
+        </div>
+    </lightning:card>
+</aura:component>

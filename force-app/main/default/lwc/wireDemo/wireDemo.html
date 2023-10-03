@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Fetching data using Wire">
+        <div class="slds-p-around_x-small">
+            <template if:true={userDetail}>
+                <p>Name of User: {userDetail.Name.value}</p>
+                <p>Email of User: {userDetail.Email.value}</p>
+                <p>Account Id: {accountId}</p>
+                <p>Account Name:{Account}</p>
+            </template>
+            <template if:true={objectInfo}>
+                <template for:each={objectInfo.results} for:item="obj">
+                    <div key={objectInfo.results.apiName} class="slds-p-around_x-small">
+                        <p>Object Name: {obj.result.apiName}</p>
+                        <p>Object Id: {obj.result.defaultRecordTypeId} </p>
+                    </div>
+                </template>
+            </template>
+            <p></p>
+        </div>
+    </lightning-card>
+</template>

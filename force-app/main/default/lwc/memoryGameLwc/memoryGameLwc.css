@@ -1,0 +1,103 @@
+.grid-container .match{
+    background:yellow;
+    visibility:visible !important;
+    opacity:100 !important;
+    border: grey;
+}
+.container{
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+}
+.slds-col{
+    display: block ruby;
+    margin-bottom: 1em;
+}
+.score , .timer, .restart{
+    text-align:right;
+    margin: 0 1em;
+}
+.restart{
+    float:right;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color: cadetblue;
+    color: red;
+    padding: .5em;
+    border-radius: 4px;
+    box-shadow: 8px 16px 9px 0px aqua;
+}
+.grid-container .card{
+    height: 3.9em;
+    width: 3.9em;
+    margin: 0.2em;
+    
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 6px 0px blue;
+}
+.card{
+    background:red;
+}
+.ope{
+    transform:rotateY(0);
+    background:#02b3e4;
+    cursor:default;
+    animation-name: flipInY;
+    backface-visibility: visible !important;
+    animation-duration: 0.75s;
+    -webkit-backface-visibility: visible !important;
+}
+.show{
+    
+    visibility:visible !important;
+    opacity:100 !important;
+    color: white;
+    
+}
+
+.show i {
+    font-size:30px;
+}
+.match i{
+    font-size:35px;
+    background:yellow;
+    color:black;
+}
+.disabled{
+    pointer-events: none;
+    opacity: 0.9;
+}
+.fa-repeat{
+    font-size: 20px;
+    cursor:pointer;
+}
+i{
+    font-size:0px;
+    
+}
+.sidebar{
+    display:none;
+}
+
+.rating .fa-star{
+    font-size: 20px;
+}
+.unmatched{
+    color:white;
+    background:yellowgreen;
+}
+.disabledd{
+    pointer-events: none;
+    opacity:0.9;
+}

@@ -1,0 +1,57 @@
+<template>
+    <div class="container" >
+        <lightning-card  title="Memory Game">
+            <lightning-button label="Reset" slot="actions"></lightning-button>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_2-of-3">
+                    <div class="slds-grid slds-grid_vertical">
+                        <div class="slds-col">
+                          <span class="score">Score:{score}</span>
+                          <span class="timer">Time-{totalTime}</span>
+                          <span class ="restart">
+                            <i class="fa fa-repeat" onclick={shuffle}></i>
+                          </span>
+                        </div>
+                        <div class="slds-col">
+                          <ul class="deck card-deck grid-container">
+                              <template for:each={cards} for:item="card">
+                                  <li key={card.id} class={card.listClass} type={card.type} onclick={displayCard}>
+                                      <i class={card.icon}></i>
+                                  </li>
+                              </template>
+
+                          </ul>
+                        </div>
+                        <template if:true={congratulationModal}>
+                            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                                <div class="slds-modal__container">
+                                <header class="slds-modal__header">
+                                
+                                <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Congratulations</h2>
+                                <p class="slds-m-top_x-small">you performed well.</p>
+                                                               
+                                </header>
+                                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                <p>Congrtulations you took <strong>{moves}</strong> moves in <strong>{totalTime}</strong> time.</p>
+                                <p class="rating">Your rating is <strong>{ratings}</strong> </p>
+                                </div>
+                                <footer class="slds-modal__footer">
+                                <button class="slds-button slds-button_neutral" onclick={shuffle}>Play Again</button>
+                                
+                                </footer>
+                                </div>
+                                </section>
+                                <div class="slds-backdrop slds-backdrop_open"></div>
+                        </template>
+                      </div>
+                </div>
+                <div class="slds-col slds-size_1-of-3 slds-border_left sidebar">
+                    <span class="moves">3</span>Move(s)
+                </div>
+            </div>
+            <p slot="footer">Moves: <strong>{moves}</strong>
+            </p>
+        </lightning-card>
+    </div>
+       
+</template>

@@ -1,0 +1,37 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Client Side Filtering Demo">
+        <div class="slds-var-p-around_medium">
+            <div>
+                <lightning-layout>
+                    <lightning-layout-item size="3" > 
+                        <lightning-combobox name={filterBy}
+                                            value={filterBy}
+                                            label="Filter By"
+                                            options={FilterByOption}
+                                            onchange={FilterByHandler}>
+                        </lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="4" >
+                        <lightning-input type="text" label="Filter" onkeyup={filterHandler}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3" alignment-bump="left"> 
+                        <lightning-combobox name={sortBy}
+                                            value={sortBy}
+                                            label="Sort By"
+                                            options={SortByOption}
+                                            onchange={SortByHandler}>
+                        </lightning-combobox>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <div>
+                    <lightning-datatable
+                        key-field="id"
+                        data={filteredData}
+                        columns={columns}>   
+                    </lightning-datatable>  
+                </div>               
+            </div>  
+        </div>
+    </lightning-card>
+</template>

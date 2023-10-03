@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Child Component">
+        <div class="slds-var-m-around_large">
+            <p>What is coming from Parent?</p>
+            <slot name="first"></slot>
+            <p> What is your NAme?</p>
+            <slot name="second"></slot>
+            <p>What ios your Age?</p>
+            <slot name="third"></slot>
+        </div>
+        <footer class="slds-card_footer slds-hide">
+            <slot name="footer" onslotchange={changeFooter}></slot>
+        </footer>
+    </lightning-card>
+    <lightning-card title="Child Component">
+        <div class="slds-var-m-around_large">
+            <p>What is coming from Parent?</p>
+            <slot name="first"></slot>
+            <p> What is your NAme?</p>
+            <slot name="second"></slot>
+            <p>What ios your Age?</p>
+            <slot name="third" ></slot>
+        </div>
+        <footer class="slds-card_footer">
+            <slot name="footer" onslotchange={changeFooter}></slot>
+        </footer>
+    </lightning-card>
+</template>

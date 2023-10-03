@@ -1,0 +1,34 @@
+<template>
+    <lightning-card  title="Parent card">
+        <lightning-button label="New" slot="actions"></lightning-button>
+        <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+        <p slot="footer">Card Footer</p>
+        <c-p2c-child-component corousal-detail={CorosalData}></c-p2c-child-component>
+    </lightning-card>
+
+<lightning-card title="Progress BAr">
+    <lightning-input type="number"
+    value={value}
+    onkeyup={ChangeHandler}
+    label="Enter Percentage"></lightning-input>
+    <div>
+        <c-progress-bar-component             percentage = {value}
+        >
+        </c-progress-bar-component>
+    </div>
+    <div>
+        <lightning-button variant="Brand" label="Reset bar" onclick={handleClick}></lightning-button>
+        
+            <lightning-button variant="Brand" label="Show Modal" onclick={ShowModals}></lightning-button>
+        <h1>{msg}</h1>
+    </div>
+</lightning-card>
+<lightning-card>
+    <template if:true={showModal}>
+        <c-child-component
+        onclose={closeHandler}
+        ></c-child-component>
+    </template>
+    
+</lightning-card>
+</template>

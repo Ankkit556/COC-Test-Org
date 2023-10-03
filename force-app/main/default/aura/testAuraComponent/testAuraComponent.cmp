@@ -1,0 +1,6 @@
+<aura:component  implements="flexipage:availableForAllPageTypes" access="global">
+    <lightning:card class="slds-p-around_medium">
+        <p>welcome to Aura Component</p>
+    </lightning:card>
+    
+</aura:component>

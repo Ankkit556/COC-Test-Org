@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Demo Map">
+        <div> 
+            <template if:true={mapMarkers.length}>
+                <lightning-map 
+                    map-markers={mapMarkers} 
+                    onmarkerselect={callMarkerHandler}
+                    selected-marker-value ={selectedMarker}
+                    markers-title={markersTitle}>
+            </lightning-map>
+            </template>  
+            <template if:true={mapMarkers.length}>
+                No Account Found
+            </template>         
+        </div>
+    </lightning-card>
+</template>

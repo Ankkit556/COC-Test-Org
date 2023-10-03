@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Navigate to Related contact">
+        <div class="slds-p-around_medium">
+             <lightning-button onclick={navigateToRelatedContact} variant="brand" label="Navigate to related Contact"></lightning-button>
+             <lightning-button onclick={navigateTofacebook} variant="brand" label="Navigate to facebook"></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="Navigate to HomePage">
+        <div class="slds-p-around_medium">
+             <lightning-button onclick={navigateToHome} variant="base" label="Navigate to Home"></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="Navigate to Chatter Page">
+        <div class="slds-p-around_medium">
+             <lightning-button onclick={navigateToChatter} variant="brand" label="Navigate to Chatter"></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="Navigate to New record">
+        <div class="slds-p-around_medium">
+             <lightning-button onclick={navigateToNewRecord} variant="brand" label="New Account"></lightning-button>
+             <lightning-button onclick={navigateToNewRecordWithDefault} variant="brand" label="New Account with Default"></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="Navigate to List View">
+        <div class="slds-p-around_medium">
+             <lightning-button onclick={navigateToListView} class="slds-button slds-button_outline-brand" label="New Account"></lightning-button>
+             <lightning-button onclick={navigateToFiles} variant="brand" label="Files"></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="Navigate to RecordPage">
+        <div class="slds-p-around_medium">
+             <p><lightning-button onclick={navigateRecordInViewMode} variant="brand" label="Navigate to Record in ViewMode"></lightning-button></p>
+             <p><lightning-button onclick={navigateRecordInEditMode} variant="brand" label="Navigate to Record in EditMode"></lightning-button></p>
+             <p><lightning-button onclick={navigateToTab} variant="brand" label="Navigate to Tab(MemoryGame)"></lightning-button></p>
+
+            </div>
+    </lightning-card>
+</template>
